@@ -1,0 +1,21 @@
+<div class="container mt-2">
+    <div class="pt-5">
+  <form [formGroup]="search">
+            <input formControlName="movie" id="movie" name="movie" class="form-control mb-2 w-75" type="text">
+        <div class="d-flex justify-content-end w-75"><button (click)="movie()" class="btn btn-dark"> Search</button></div>
+  </form>
+    </div>
+    <div class="row m-5">
+        <div class="col-md-5 mb-2">
+            <img style="height:400px" src="{{moviedata.Poster}}" alt="">
+        </div>
+        <div *ngIf="check" class="col-md-6">
+            <h1>{{moviedata.Title}}</h1>
+            <p><strong>Year:</strong> {{moviedata.Year}}</p>
+            <p><strong>Genre: </strong>{{moviedata.Genre}}</p>
+            <p><strong>Director:</strong> {{moviedata.Director}}</p>
+            <p><strong>Plot: </strong>{{moviedata.Plot}}</p>
+            <p><strong>IMDB: </strong>{{moviedata.imdbRating}}</p>
+        </div>
+    </div>
+</div>
