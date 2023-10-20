@@ -1,7 +1,7 @@
 <div class="container mt-2">
     <div class="pt-5">
   <form [formGroup]="search">
-            <input formControlName="movie" id="movie" name="movie" class="form-control mb-2 w-75" type="text">
+            <input placeholder="Type Movie Name..." formControlName="movie" id="movie" name="movie" class="form-control mb-2 w-75" type="text">
         <div class="d-flex justify-content-end w-75"><button (click)="movie()" class="btn btn-dark"> Search</button></div>
   </form>
     </div>
@@ -14,8 +14,11 @@
             <p><strong>Year:</strong> {{moviedata.Year}}</p>
             <p><strong>Genre: </strong>{{moviedata.Genre}}</p>
             <p><strong>Director:</strong> {{moviedata.Director}}</p>
+            <p><strong>Writer: </strong>{{moviedata.Writer}}</p>
+            <p><strong>Actors: </strong>{{moviedata.Actors}}</p>
             <p><strong>Plot: </strong>{{moviedata.Plot}}</p>
             <p><strong>IMDB: </strong>{{moviedata.imdbRating}}</p>
+            
         </div>
     </div>
 </div>
